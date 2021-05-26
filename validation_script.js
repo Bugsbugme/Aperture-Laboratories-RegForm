@@ -248,5 +248,16 @@ function regFormValidation()
         return false;
     }
 
+    //This statement checks whether the Privacy Policy checkbox has been checked.
+    //If it has not, an error message is shown.
+    var prvyPol = document.getElementById('prvyPol');
+
+    if (!prvyPol.checked)
+    {
+        alert("You must accept the Privacy Policy in order to continue.");
+        document.regForm.prvyPol.focus();
+        return false;
+    }
+
     return true;
 }
