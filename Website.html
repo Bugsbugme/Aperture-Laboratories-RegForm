@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+
+<!-- WebPage by Gracie Bryan_20210691 -->
+
+<html>
+
+    <head>
+
+        <title>
+            Aperture Labs: Registration
+        </title>
+
+        <meta charset="utf-8" />
+
+        <script src="validation_script.js"></script>
+        
+        <link href="bootstrap.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+
+        <div class="container" style="min-width: 550px;">
+
+            <!--//////////
+                //HEADER//
+                //////////-->
+            <div class="jumbotron" style="box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.47);">
+
+                <div class="well" style="background-color: #C0C0C0">
+                    <img alt="Logo" src="ApertureLabs_logo.png" style="max-width: 100%; height: auto; width: auto;"/>
+                </div>
+
+                <h1 style="text-align: center">
+                    Registration Form
+                </h1>
+
+            </div>
+
+            <!--////////
+                //FORM//
+                ////////-->
+            <form action="https://wevmit01.azurewebsites.net/formtest.cshtml" method="post" name="regForm" onsubmit="return regFormValidation();">
+
+                <fieldset>
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-body" style="text-align: center">
+                        Register with Aperture Laboratories for all your sciencey needs!<br>
+                        Please fill out this form to create your account. Required fields are marked with a yellow border.
+                        </div>
+                        
+                    </div>
+
+                    <!--///////////////////
+                        //CONTACT DETAILS//
+                        ///////////////////-->
+                    <div class="panel panel-default" style="box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.47);">
+
+                        <div class="panel-heading">
+
+                            <h5 style="font-weight: bold; font-size: large;">
+                            Contact Details
+                            </h5>
+
+                        </div>
+
+                        <div class="panel-body">
+
+                            <!--Name-->
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            First Name
+                                        </label>
+
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">                                    
+                                            <input type="text" class="form-control" name="fname" id="firstName" placeholder="Required" autocomplete="given-name">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        
+                                        <label class="control-label">
+                                            Last Name
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="lname" id="lastName" placeholder="Required" autocomplete="family-name">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px">
+
+                                    <div class="well well-sm">
+                                        Please enter your name here.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!--Company Name-->
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Company
+                                        </label>
+
+                                        <div style="padding-bottom: 40px;">
+                                            <input type="text" class="form-control" name="comName" id="adrsCom" placeholder="Optional">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px;">
+                            <div class="well well-sm">
+                            If you are making an account for a Company, please also enter the name of the Company here.
+                            </div>
+                            </div>
+
+                            </div>
+
+                            <!--Address-->
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Address
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="address" id="adrsLine1" placeholder="Required" autocomplete="address-line1">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Address Line 2
+                                        </label>
+
+                                        <div style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="address2" id="adrsLine2" placeholder="Optional" autocomplete="address-line2">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            City
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="city" id="adrsCity" placeholder="Required" autocomplete="address-level2">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Suburb
+                                        </label>
+
+                                        <div style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="subopt" id="adrsSuburb" placeholder="Optional">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            State/Region
+                                        </label>
+
+                                        <div style="padding-bottom: 20px;">
+                                            <input type="text" class="form-control" name="region" id="adrsRegion" placeholder="Optional" autocomplete="address-level1">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Post Code
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 40px;">
+                                            <input type="text" class="form-control" name="postal" id="adrsPC" placeholder="Required" autocomplete="postal-code">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px;">
+                                    <div class="well well-sm">
+                                        Please enter a valid postal address.<br />
+                                        This address will also be used as the shipping address unless an alternative is specified during check out.<br />
+                                        <br />
+                                        Example:<br />
+                                        123 Street Name St<br />
+                                        City Name<br />
+                                        1234
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--Phone/Email-->
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Phone Number
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="tel" class="form-control" name="phone" id="phoneNo1" placeholder="Required" autocomplete="tel">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Additional Phone Number
+                                        </label>
+
+                                        <div style="padding-bottom: 20px;">
+                                            <input type="tel" class="form-control" name="phnOpt" id="phoneNo2" placeholder="Optional">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Email
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Required" autocomplete="email">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px;">
+
+                                    <div class="well well-sm">
+                                        Please provide at least one phone number.<br />
+                                        <br />
+                                        It should look like one of the following:<br />
+                                        01 234 5678 || 01 2346 7890<br />
+                                        012 345 6789 || 012 3456 7890<br />
+                                        +01 23 456 7890 || +01 23 4567 8901<br />
+                                        Spaces are not required.
+                                        <br />
+                                        <br />
+                                        An Email Address is also required.<br />
+                                        <br />
+                                        Example:<br />
+                                        user@gmail.com
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--/////////////////
+                        //DATE OF BIRTH//
+                        /////////////////-->
+                    <div class="panel panel-default" style="box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.47);">
+
+                        <div class="panel-heading">
+                            <h5 style="font-weight: bold; font-size: large;">
+                                Date of Birth
+                            </h5>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <!--Birthday-->
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-6 col-md-offset-6">
+
+                                        <label class="control-label">
+                                            Birthday
+                                        </label>
+
+                                        <div class="has-warning">
+                                            <input type="date" class="form-control" name="birthday" id="dob">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px;">
+
+                                    <div class="well well-sm">
+                                        Please provide your Date of Birth.<br />
+                                        You must be 21 or older to create an account and make purchases from Aperture Laboratories.<br />
+                                        <br />
+                                        It should be in the short date string format.<br />
+                                        Example:<br />
+                                        DD/MM/YYYY
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--///////////////////
+                        //ACCOUNT DETAILS//
+                        ///////////////////-->
+                    <div class="panel panel-default" style="box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.47);">
+
+                        <div class="panel-heading">
+                            <h5 style="font-weight: bold; font-size: large;">
+                                Account Details
+                            </h5>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Account Name
+                                        </label>
+
+                                        <div class="has-warning">
+                                            <input type="text" class="form-control" name="accountName" id="acntName" placeholder="Required">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 40px; padding-top: 12px;">
+
+                                        <div class="radio">
+
+                                            <label style="font-weight: bold;">
+                                                <input type="radio" name="accountType" id="acntType1" value="Personal">
+                                                Personal
+                                            </label>
+
+                                        </div>
+
+                                        <div class="radio">
+
+                                            <label style="font-weight: bold;">
+                                                <input type="radio" name="accountType" id="acntType2" value="Company">
+                                                Company
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px;">
+
+                                    <div class="well well-sm">
+                                        Please specify the Account Type and Name.<br />
+                                        It can be up to 50 characters long but no less than 5.<br />
+                                        It can contain numbers and letters.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="control-label">
+                                            Password
+                                        </label>
+
+                                        <div class="has-warning" style="padding-bottom: 20px;">
+                                            <input type="password" class="form-control" name="password" id="acntPswd" placeholder="Required">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                        <label class="control-label">
+                                            Confirm Password
+                                        </label>
+
+                                        <div class="has-warning">
+                                            <input type="password" class="form-control" name="confirmPassword" id="confPswd" placeholder="Required">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6" style="padding-top: 25px; padding-bottom: 40px;">
+
+                                    <div class="well well-sm">
+                                        Please create a Password for your Account.<br />
+                                        It can contain UPPERCASE letters, lowercase letters, numbers, and special characters.<br />
+                                        It MUST contain:
+
+                                        <ul>
+                                            <li>At least one Uppercase letter</li>
+                                            <li>At least one Lowecase letter</li>
+                                            <li>At least one Number</li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group well" style="margin: auto; max-width: 500px;">
+
+                                <div class="container" style="float: left; margin: auto; max-width: 50%;">
+
+                                    <div class="checkbox" style="text-align: right">
+
+                                        <label style="font-weight: bold;">
+                                            Subscribe to Newsletter?
+                                        </label>
+
+                                    </div>
+
+                                    <div class="checkbox" style="text-align: right">
+
+                                        <label style="font-weight: bold;">
+                                            Terms and Conditions
+                                        </label>
+
+                                    </div>
+
+                                    <div class="checkbox" style="text-align: right">
+
+                                        <label style="font-weight: bold;">
+                                            <a href="privacyPolicy.html" target="_blank">Privacy Policy</a>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="container" style="float: left; margin: auto; max-width: 50%; padding-bottom: 40px;">
+
+                                    <div class="checkbox">
+
+                                        <label style="font-weight: bold;">
+                                            <input type="checkbox" name="newsletter" id="nwsLtr">
+                                            Yes
+                                        </label>
+
+                                    </div>
+
+                                    <div class="checkbox">
+
+                                        <label style="font-weight: bold;">
+                                            <input type="checkbox" name="termsAndCond" id="trmsCond">
+                                            Accept?
+                                        </label>
+
+                                    </div>
+
+                                    <div class="checkbox">
+
+                                        <label style="font-weight: bold;">
+                                            <input type="checkbox" name="privacyPolicy" id="prvyPol">
+                                            Accept?
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="container" style="margin: auto; max-width: 50%;">
+
+                                    <button type="reset" class="btn btn-default col-lg-6 col-md-6 col-sm-6 col-xs-6">Cancel</button>
+                                    <button type="submit" class="btn btn-primary col-lg-6 col-md-6 col-sm-6 col-xs-6">Submit</button>
+                                
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--//////////
+                        //FOOTER//
+                        //////////-->
+                    <div class="panel panel-default" style="box-shadow: 0px 0px 36px 2px rgba(0,0,0,0.47);">
+
+                        <div class="panel-body" style="text-align: center">
+                            <footer>&copy; Copyright Aperture Laboratories Ltd. 2021 || Website by Gracie Bryan</footer>
+                        </div>
+                    
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
